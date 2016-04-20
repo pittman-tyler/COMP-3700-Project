@@ -10,23 +10,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.pen-title h1 {
-  margin: 0 0 20px;
-  font-size: 48px;
-  font-weight: 300;
-}
-.pen-title span {
-  font-size: 12px;
-}
-.pen-title span .fa {
-  color: #33b5e5;
-}
-.pen-title span a {
-  color: #33b5e5;
-  font-weight: 600;
-  text-decoration: none;
-}
-
 /* Form Module */
 .form-module {
   position: relative;
@@ -64,10 +47,7 @@ body {
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
-.form-module input:focus {
-  border: 1px solid #33b5e5;
-  color: #333333;
-}
+
 .form-module button {
   cursor: pointer;
   background: #33b5e5;
