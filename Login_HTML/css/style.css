@@ -75,6 +75,7 @@ body {
   border: 0;
   padding: 10px 15px;
   color: #ffffff;
+  font-weight: bold;
   font-size: 12px;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
