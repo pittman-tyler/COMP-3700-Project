@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+      <div class="main">
+      <h1>Create or Delete a Course</h1>
+            <ul class="tabs">
+              <li>
+                <input type="radio" checked name="tabs" id="tab1">
+                <label for="tab1">Create a course</label>
+                <div id="tab-contentAdd" class="tab-content animated fadeIn">
+                   <input type="text" placeholder="Course ID"/>
+                   <input type="text" placeholder="Course Name"/>
+                   <input type="text" placeholder="Description"/>
+                   <input type="text" placeholder="Teacher"/>
+                   <input type="text" placeholder="Credit hours"/>
+                   <input type="text" placeholder="Maximum size"/>
+
+      			       <button>Create</button>
+                </div>
+              </li>
+              <li>
+                <input type="radio" name="tabs" id="tab2">
+                <label for="tab2">Delete a course</label>
+                <div id="tab-contentDrop" class="tab-content animated fadeIn">
+                   <input type="text" placeholder="Course ID"/>
+                   <button>Delete</button>
+                </div>
+              </li>
+          </ul>
+  </body>
+</html>
