@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+      <div class="main">
+      <h1>Create or Delete a User</h1>
+            <ul class="tabs">
+              <li>
+                <input type="radio" checked name="tabs" id="tab1">
+                <label for="tab1">Create</label>
+                <div id="tab-contentCreate" class="tab-content animated fadeIn">
+                   <input type="text" placeholder="Username"/>
+      			       <input type="text" placeholder="Status"/>      
+      			       <input type="text" placeholder="Major"/>
+      			       <button>Create</button>
+                </div>
+              </li>
+              <li>
+                <input type="radio" name="tabs" id="tab2">
+                <label for="tab2">Delete</label>
+                <div id="tab-contentDelete" class="tab-content animated fadeIn">
+                   <input type="text" placeholder="Username"/>
+                   <button>Delete</button>
+                </div>
+              </li>
+          </ul>
+  </body>
+</html>
