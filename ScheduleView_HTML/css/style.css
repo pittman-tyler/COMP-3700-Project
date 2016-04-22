@@ -1,0 +1,32 @@
+/* Custom Stylesheet */
+body, html {
+    font-weight: 100;
+    background: #e9e9e9;
+    text-align: center;
+    padding-top: 50px;
+    font-size: 14px;
+    color: #666666;
+    font-family: 'RobotoDraft', 'Roboto', sans-serif;
+    letter-spacing: 2px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#scheduleContents {
+  background: #666666;
+  width: 600px;
+  height: 400px;
+  margin-left: 330px;
+  display: block;
+}
+
+#scheduleContents li {
+  margin-top: 20px;
+  display: inline-block;
+  padding-right: 20px;
+}
+
+#scheduleContents li a {
+  text-decoration: none;
+  color: #ffffff;
+}
