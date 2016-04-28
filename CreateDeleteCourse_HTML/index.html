@@ -1,9 +1,21 @@
 <!DOCTYPE html>
+<html>
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="AdminCreateDeleteCourseStyle.css">
   </head>
   <body>
+      <ul class = "navbar">
+    <li><a href = "#">Home</a></li>
+    <li><a href = "#">Search for Course</a></li>
+    <li><a href = "#">Search for User</a></li>
+    <li><a href = "#">Modify Registration Status</a></li>
+    <li><a href = "#">Create/Delete Course</a></li>
+    <li><a href = "#">Create/Delete User</a></li>
+    <li><a href = "#">View Students</a></li>
+    <li><a href = "#">Log out</a></li>
+
+    </ul>
       <div class="main">
       <h1>Create or Delete a Course</h1>
             <ul class="tabs">
@@ -11,24 +23,46 @@
                 <input type="radio" checked name="tabs" id="tab1">
                 <label for="tab1">Create a course</label>
                 <div id="tab-contentAdd" class="tab-content animated fadeIn">
-                   <input type="text" placeholder="Course ID"/>
-                   <input type="text" placeholder="Course Name"/>
-                   <input type="text" placeholder="Description"/>
-                   <input type="text" placeholder="Teacher"/>
-                   <input type="text" placeholder="Credit hours"/>
-                   <input type="text" placeholder="Maximum size"/>
-
-      			       <button>Create</button>
+                  <form id = "myForm">
+                   <input name = "createCourseId" placeholder="Course ID"/>
+                   <input name = "courseName" placeholder="Course Name"/>
+                   <input name = "desc" placeholder="Description"/>
+                   <input name = "teacher" placeholder="Teacher"/>
+                   <input name = "creditHours" placeholder="Credit hours"/>
+                   <input name = "maxSize" placeholder="Maximum size"/>
+      			       <button input type = "button" onClick="createCourseClick(this.form)">Create</button>
                 </div>
               </li>
+              </form>
               <li>
                 <input type="radio" name="tabs" id="tab2">
                 <label for="tab2">Delete a course</label>
                 <div id="tab-contentDrop" class="tab-content animated fadeIn">
-                   <input type="text" placeholder="Course ID"/>
-                   <button>Delete</button>
+                <form id = myForm>
+                   <input type="text" name = deleteCourseId placeholder="Course ID"/>
+                   <button input type = "button" onClick="deleteCourseClick(this.form)">Delete</button>
                 </div>
               </li>
+              </form>
           </ul>
   </body>
 </html>
+
+ <script type = "text/javascript">
+      function createCourseClick(form) {
+
+        var createCourseId = form.createCourseId.value;
+        var courseName = form.courseName.value;
+        var desc = form.desc.value;
+        var teacher = form.teacher.value;
+        var creditHours = form.creditHours.value;
+        var maxSize = form.maxSize.value;
+        //create object in c# with these params
+      }
+
+      function deleteCourseClick(form) {
+
+        var deleteCourseId = form.deleteCourseId.value;
+        //call c# here
+      }
+</script>
