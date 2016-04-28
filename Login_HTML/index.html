@@ -1,25 +1,42 @@
 <!DOCTYPE html>
-<html >
+<html>
   <head>
     <meta charset="UTF-8">
     <title>Login Page</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="LoginStyle.css">
   </head>
   <body>
   <h1>Welcome!</h1>
 </div>
 <!-- Form Module-->
 <div class="module form-module">
-  <div class="toggle"><i class="fa fa-times fa-pencil"></i>
+  <div class="toggle">
   </div>
   <div class="form">
     <h2>Login to your account</h2>
-    <form>
-      <input type="text" placeholder="Username"/>
-      <input type="password" placeholder="Password"/>
-      <button>Login</button>
+    <form id ="myForm">
+      <input type="username" name="usr" placeholder="Username"/>
+      <input type="password" id = "pword" placeholder="Password"/>
+      <button input type = "button" onClick="getCredentials(this.form)">Login</button>
     </form>
   </div>
 </div>
+    <script type = "text/javascript">
+         function getCredentials(form) {
+              var username = form.usr.value;
+              var password = form.pword.value;
+
+              if ((username == "student") && (password == "password")) {
+                   location.assign("AdminMain.html");
+              }
+              else {
+                   alert("Login unsuccessful");
+              }
+       }
+</script>
+    </script>
+
+    
+  
   </body>
 </html>
