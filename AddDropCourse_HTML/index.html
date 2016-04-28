@@ -1,9 +1,20 @@
 <!DOCTYPE html>
+<html>
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="StudentAddDropCourseStyle.css">
   </head>
   <body>
+
+      <ul class = "navbar">
+    <li><a href = "#">Home</a></li>
+    <li><a href = "#">Search for Course</a></li>
+    <li><a href = "#">Add/Drop Course</a></li>
+    <li><a href = "#">View Transcript</a></li>
+    <li><a href = "#">View Schedule</a></li>
+    <li><a href = "#">Log out</a></li>
+
+    </ul>
       <div class="main">
       <h1>Add or Drop a Course</h1>
             <ul class="tabs">
@@ -11,18 +22,36 @@
                 <input type="radio" checked name="tabs" id="tab1">
                 <label for="tab1">Add a course</label>
                 <div id="tab-contentAdd" class="tab-content animated fadeIn">
-                   <input type="text" placeholder="Course ID"/>
-      			       <button>Add</button>
+                  <form  id = "myAddForm">
+                   <input id = "courseID" placeholder="Course ID"/>
+      			       <button input type = "button" onClick="getCourseIDAdd(this.form)">Add</button>
+                   </form>
                 </div>
               </li>
               <li>
                 <input type="radio" name="tabs" id="tab2">
                 <label for="tab2">Drop a course</label>
                 <div id="tab-contentDrop" class="tab-content animated fadeIn">
-                   <input type="text" placeholder="Course ID"/>
-                   <button>Drop</button>
+                   <form  id = "myDeleteForm">
+                   <input name = "courseID" placeholder="Course ID"/>
+                   <button input type = "button" onClick="getCourseIDDelete(this.form)">Drop</button>
+                   </form>
                 </div>
               </li>
           </ul>
   </body>
 </html>
+
+<script type = "text/javascript">
+      function getCourseIDAdd(form) {
+        var add = form.courseID.value;
+        alert(add);
+         //c# gets courseID to add 
+      }
+
+        function getCourseIDDelete(form) {
+        var del = form.courseID.value;
+        alert(del);
+        //c# gets courseID to delete 
+      }
+</script>
