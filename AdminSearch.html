@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Search</title>
+        <link rel="stylesheet" href="AdminSearchStyle.css">
+    </head>
+    <body>
+
+    <ul class = "navbar">
+    <li><a href = "#">Home</a></li>
+    <li><a href = "#">Search for Course</a></li>
+    <li><a href = "#">Search for User</a></li>
+    <li><a href = "#">Modify Registration Status</a></li>
+    <li><a href = "#">Create/Delete Course</a></li>
+    <li><a href = "#">Create/Delete User</a></li>
+    <li><a href = "#">View Students</a></li>
+    <li><a href = "#">Log out</a></li>
+    </ul>
+    
+		<div class = "search">
+              <h1>Search </h1>
+        <form  id = "myForm">
+		    <input type="text" name = "str">
+		    <button input type = "button" onClick="getField(this.form)">Search</button>
+	</body>	
+</html>
+
+ <script type = "text/javascript">
+         function getField(form) {
+             var str = form.str.value;
+                   alert("You entered: " + str);
+       }
+</script>
+
