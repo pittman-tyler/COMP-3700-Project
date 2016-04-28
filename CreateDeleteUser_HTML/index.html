@@ -1,9 +1,21 @@
 <!DOCTYPE html>
+<html>
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="AdminCreateDeleteUserStyle.css">
   </head>
   <body>
+     <ul class = "navbar">
+    <li><a href = "#">Home</a></li>
+    <li><a href = "#">Search for Course</a></li>
+    <li><a href = "#">Search for User</a></li>
+    <li><a href = "#">Modify Registration Status</a></li>
+    <li><a href = "#">Create/Delete Course</a></li>
+    <li><a href = "#">Create/Delete User</a></li>
+    <li><a href = "#">View Students</a></li>
+    <li><a href = "#">Log out</a></li>
+
+    </ul>
       <div class="main">
       <h1>Create or Delete a User</h1>
             <ul class="tabs">
@@ -11,20 +23,77 @@
                 <input type="radio" checked name="tabs" id="tab1">
                 <label for="tab1">Create</label>
                 <div id="tab-contentCreate" class="tab-content animated fadeIn">
-                   <input type="text" placeholder="Username"/>
-      			       <input type="text" placeholder="Status"/>      
-      			       <input type="text" placeholder="Major"/>
-      			       <button>Create</button>
+                   <form  id = "myForm">
+                   <input id = "username"    placeholder="Username"/>
+                   <input id = "password"    placeholder="Password"/>     
+                   <input id = "studentName" placeholder="Name"/>
+                      <form method="post" action="/">
+                      <fieldset>
+                      <legend>Select one:</legend>
+                        
+                      <input id="student" type="checkbox" name="student">
+                      <label for="Student">Student</label>
+                        
+                      <input id="teacher" type="checkbox" name="teacher">
+                      <label for="Teacher">Teacher</label>
+                        
+                      <input id="admin" type="checkbox" name="admin" onClick="handleClick(this.form)">
+                      <label for="Admin">Admin</label>
+                        
+                      </fieldset>
+      			       <button input type = "button" onClick="createUserClick(this.form)">Create</button>
+                   </form>
                 </div>
               </li>
               <li>
                 <input type="radio" name="tabs" id="tab2">
                 <label for="tab2">Delete</label>
                 <div id="tab-contentDelete" class="tab-content animated fadeIn">
-                   <input type="text" placeholder="Username"/>
-                   <button>Delete</button>
+                <form id = "myForm">
+                   <input type="text" name = "deleteUsername" placeholder="Username"/>
+                   <button input type = "button" onClick="deleteUserClick(this.form)">Delete</button>
+                   </form>
                 </div>
               </li>
           </ul>
   </body>
 </html>
+
+<script type = "text/javascript">
+      function createUserClick(form) {
+        var createUsername = form.username.value;
+        var password = form.password.value;
+        var name = form.studentName.value;
+        var accountType = handleClick(form); 
+        if (accountType == "student") {
+        //log in c# that student was chosen
+        }
+        if (accountType == "teacher") {
+       //log in c# that teacher was chosen
+        }
+        if (accountType == "admin") {
+        //log in c# that admin was chosen
+        }
+     
+      }
+
+      function deleteUserClick(form) {
+
+        var deleteUsername = form.deleteUsername.value;
+        alert("deleteUsername: " + deleteUsername);
+      }
+
+      function handleClick (form) {
+        if (form.student.checked == true) {
+        	//log in c# that student was chosen
+        	return "student";
+        }
+        else if (form.teacher.checked == true) {
+        	//log in c# that teacher was chosen
+        	return "teacher";
+        }
+        else if (form.admin.checked == true) {
+        	return "admin";
+        }
+      }
+</script>
