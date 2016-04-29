@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Search</title>
+        <link rel="stylesheet" href="TeacherSearchStyle.css">
+    </head>
+    <body>
+
+    <ul class = "navbar">
+    <li><a href = "#">Home</a></li>
+    <li><a href = "#">View Schedule</a></li>
+    <li><a href = "#">Log out</a></li>
+
+    </ul>
+    
+		<div class = search>
+            <form  id = "myForm">
+		    <input type="text" name = "str">
+		    <button input type = "button" onClick="getField(this.form)">Search</button>
+		</form>
+	</body>	
+</html>
+
+ <script type = "text/javascript">
+         function getField(form) {
+             var str = form.str.value;
+                   alert("You entered: " + str);
+       }
+</script>
